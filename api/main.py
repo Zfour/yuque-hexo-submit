@@ -1,5 +1,8 @@
 # -*- coding: utf8 -*-
 import requests
+
+class handler(BaseHTTPRequestHandler):
+
 def main_handler(event, context):
     r = requests.post("https://api.github.com/repos/Zfour/my-blog-source-file/dispatches",
     json = {"event_type": "run-it"},
